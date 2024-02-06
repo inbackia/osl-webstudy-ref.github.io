@@ -1,0 +1,72 @@
+@font-face {
+  font-family: "KoddiUD OnGothic";
+  src: url(/font/KoddiUDOnGothic-Regular.woff2) format(woff2), url(/font/KoddiUDOnGothic-Regular.woff) format(woff);
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  position: relative;
+  box-sizing: border-box;
+  font-family: "KoddiUD OnGothic", "Pretendard", sans-serif;
+}
+
+a, a:link, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  font-size: 16px;
+}
+
+:root {
+  --background: #000;
+  --color: #fff;
+}
+
+body {
+  background: var(--background);
+  color: var(--color);
+  line-height: 1.55rem;
+}
+
+.background {
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+}
+
+.link-tree {
+  font-size: calc(1rem + 0.3vw);
+  height: 100%;
+  line-height: 1.55rem;
+  counter-reset: linkTree;
+}
+.link-tree li {
+  font-family: "KoddiUD OnGothic";
+  mix-blend-mode: difference;
+  display: flex;
+  align-items: center;
+  position: fixed;
+}
+.link-tree li::before {
+  counter-increment: linkTree;
+  content: counter(linkTree);
+  border: 3px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+.link-tree a {
+  border-bottom: 3px solid transparent;
+}
+.link-tree a:hover {
+  border-bottom: 3px solid;
+}/*# sourceMappingURL=style.css.map */
